@@ -12,7 +12,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 
-export default function Wrapper() {
+export default function SubjectsWrapper() {
     const context = useContext(QuizContext);
     if (!context) {
         return null;
@@ -24,13 +24,13 @@ export default function Wrapper() {
             {quizState?.length === 0 && <div className='text-center text-muted text-xl font-semibold select-none'>No subjects</div>}
             {
                 quizState?.map((quiz) => (
-                    <Accordion type="single" collapsible key={quiz.StateId}>
+                    <Accordion type="single" collapsible key={quiz.StateId} className='md:px-6 px-3'>
                         <AccordionItem value={quiz.StateId}>
                             <AccordionTrigger>
                                 <div className='flex items-center gap-3'>
                                     <h1 className="text-2xl font-semibold">{quiz.item.subject.toUpperCase()}</h1>
                                     <Button size={"none"} variant={"destructive"} className='p-1 z-50' onClick={() => DeleteSubject(quiz.StateId, quiz.item.subject)} asChild>
-                                            <Trash2 size={28} />
+                                        <Trash2 size={28} />
                                     </Button>
                                 </div>
                             </AccordionTrigger>

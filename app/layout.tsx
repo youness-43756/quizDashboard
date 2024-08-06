@@ -22,12 +22,12 @@ export default function RootLayout({
           position="top-right"
           reverseOrder={false}
         />
-        
+
         <QuizProvider>
-          <div className="min-h-screen h-screen max-w-7xl mx-auto flex">
+          <div className="flex min-h-screen h-screen max-w-7xl mx-auto">
             <MobileNav />
             <DesktopNav />
-            <div className="md:border-input border-l-2 w-full h-full py-8 px-4 overflow-y-scroll">
+            <div className="md:border-input border-l-2 w-full h-full py-8 px-4 overflow-y-auto scroll-smooth">
               {children}
             </div>
           </div>

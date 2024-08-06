@@ -1,9 +1,12 @@
 "use client"
 import clsx from "clsx";
 import Link from "next/link";
+import { useContext } from "react";
+import { Badge } from "@/components/ui/badge"
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { HomeIcon, PlusIcon } from "lucide-react";
+import { QuizContext } from "@/context/contextProvider";
 
 const navigation = [
     { label: "Home", href: "/", icon: <HomeIcon className="font-bold" /> },
@@ -11,6 +14,11 @@ const navigation = [
 ];
 
 export default function NavBarLinks() {
+    const context = useContext(QuizContext);
+    if (!context) {
+        return null;
+    }
+    const { quizState } = context;
     const pathname = usePathname();
     return (
         <>
@@ -20,6 +28,9 @@ export default function NavBarLinks() {
                         <Link href={link.href} className="flex gap-2">
                             {link.icon}
                             <span>{link.label}</span>
+                            <Badge variant="destructive"
+                                className={clsx("float-right",link.label !== "Home" && "hidden")}>
+                                    {quizState?.length}</Badge>
                         </Link>
                     </Button>
                 ))

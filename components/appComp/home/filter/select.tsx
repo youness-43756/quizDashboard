@@ -26,7 +26,7 @@ export function SelectSubject() {
       <SelectTrigger className="w-[180px] capitalize shadow-sm">
         <SelectValue placeholder="Select a Subject" />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="z-[1000]">
         <SelectGroup>
           {
             selectItems.length > 0 ? (

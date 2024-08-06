@@ -13,7 +13,7 @@ import { Textarea } from '../ui/textarea'
 import { QuizContext } from '@/context/contextProvider'
 import { Input } from '../ui/input'
 import { toast } from 'react-hot-toast'
-import { LoaderCircle, LoaderIcon } from 'lucide-react'
+import { LoaderCircle } from 'lucide-react'
 
 
 export default function AddQuizForm() {
@@ -32,6 +32,7 @@ export default function AddQuizForm() {
         try {
             values.quiz = JSON.parse(values.quiz)
             SaveQuizToMongoDB(values);
+            form.reset();
         } catch (error: any) {
             toast.error(
                 error.message,
@@ -63,7 +64,7 @@ export default function AddQuizForm() {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <Input placeholder="Subject title" className='shadow-sm' {...field} />
+                                <Input placeholder="Subject title.." autoComplete='false' className='shadow-sm lowercase' {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -75,7 +76,7 @@ export default function AddQuizForm() {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <Textarea placeholder="Copie here" className='shadow-sm' rows={8} {...field} />
+                                <Textarea placeholder="Copie Json here.." className='shadow-sm' rows={8} {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>

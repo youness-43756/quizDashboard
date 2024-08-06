@@ -1,17 +1,19 @@
 import Filter from "@/components/appComp/home/filter/page";
 import { SelectSubject } from "@/components/appComp/home/filter/select";
-import Wrapper from "@/components/appComp/home/quizStateWrapper/wrapper";
+import SubjectsWrapper from "@/components/appComp/home/quizStateWrapper/subjectsWrapper";
 
 export default function Home() {
   return (
-    <main className="h-full w-full">
-      <div className="w-full flex gap-2 justify-between md:mb-8 mb-4">
-        <SelectSubject />
-        <Filter />
+    <main className="min-h-screen w-full">
+      <div className="sticky top-0 bg-white z-[100] py-5">
+        <div className="w-full flex gap-2 justify-between">
+          <SelectSubject />
+          <Filter />
+        </div>
       </div>
       <div className="space-y-3">
-        <Wrapper />
+        <SubjectsWrapper />
       </div>
-    </main>
+    </main >
   );
 }
