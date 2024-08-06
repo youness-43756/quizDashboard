@@ -24,11 +24,11 @@ export default function SubjectsWrapper() {
             {quizState?.length === 0 && <div className='text-center text-muted text-xl font-semibold select-none'>No subjects</div>}
             {
                 quizState?.map((quiz) => (
-                    <Accordion type="single" collapsible key={quiz.StateId} className='md:px-6 px-3'>
+                    <Accordion type="single" collapsible key={quiz.StateId} className='md:px-6 px-2'>
                         <AccordionItem value={quiz.StateId}>
                             <AccordionTrigger>
-                                <div className='flex items-center gap-3'>
-                                    <h1 className="md:text-2xl text-xl font-semibold">{quiz.item.subject.toUpperCase()}</h1>
+                                <div className='w-full flex items-center justify-between md:gap-3 gap-1'>
+                                    <h1 className="md:text-2xl text-xl font-semibold text-balance flex-1 text-start">{quiz.item.subject.toUpperCase()}</h1>
                                     <Button size={"none"} variant={"destructive"} className='p-1 z-50' onClick={() => DeleteSubject(quiz.StateId, quiz.item.subject)} asChild>
                                         <Trash2 size={28} />
                                     </Button>

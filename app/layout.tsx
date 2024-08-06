@@ -24,10 +24,10 @@ export default function RootLayout({
         />
 
         <QuizProvider>
-          <div className="flex min-h-screen h-screen max-w-7xl mx-auto">
+          <div className="flex md:flex-row flex-col min-h-screen h-screen max-w-7xl mx-auto">
             <MobileNav />
             <DesktopNav />
-            <div className="md:border-input border-l-2 w-full h-full py-8 px-4 overflow-y-auto scroll-smooth">
+            <div className="w-full h-full md:border-input md:border-l-2 md:py-8 py-3 md:px-4 px-2 overflow-y-auto scroll-smooth">
               {children}
             </div>
           </div>

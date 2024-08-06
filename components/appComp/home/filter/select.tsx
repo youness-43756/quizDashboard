@@ -23,10 +23,10 @@ export function SelectSubject() {
   };
   return (
     <Select onValueChange={handleValueChange} defaultValue={selectedSubject}>
-      <SelectTrigger className="w-[180px] capitalize shadow-sm">
+      <SelectTrigger className="md:w-[180px] w-[130px] capitalize shadow-sm">
         <SelectValue placeholder="Select a Subject" />
       </SelectTrigger>
-      <SelectContent className="z-[1000]">
+      <SelectContent className="z-[1000] w-[180px] md:w-[220px]">
         <SelectGroup>
           {
             selectItems.length > 0 ? (
