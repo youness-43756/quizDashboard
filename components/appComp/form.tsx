@@ -17,17 +17,17 @@ import { LoaderCircle, LoaderIcon } from 'lucide-react'
 
 
 export default function AddQuizForm() {
-    const context = useContext(QuizContext);
-    if (!context) {
-        return null;
-    }
-    const { SaveQuizToMongoDB, load } = context;
     const form = useForm({
         defaultValues: {
             subject: "",
             quiz: [],
         },
     })
+    const context = useContext(QuizContext);
+    if (!context) {
+        return null;
+    }
+    const { SaveQuizToMongoDB, load } = context;
     function onSubmit(values: any) {
         try {
             values.quiz = JSON.parse(values.quiz)
