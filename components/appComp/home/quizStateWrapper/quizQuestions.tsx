@@ -1,5 +1,4 @@
 import { Input } from '@/components/ui/input'
-import React from 'react'
 
 export default function QuizQuestions({ item }: { item: any }) {
     return (

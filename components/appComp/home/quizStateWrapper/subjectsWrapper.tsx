@@ -11,13 +11,14 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import { DeleteSubjectDialog } from './deleteSubjectDialog';
 
 export default function SubjectsWrapper() {
     const context = useContext(QuizContext);
     if (!context) {
         return null;
     }
-    const { quizState, DeleteSubject, load, deleteLoader } = context;
+    const { quizState, load } = context;
     return (
         <>
             {(load && !quizState) && <Skelaton />}
@@ -29,9 +30,7 @@ export default function SubjectsWrapper() {
                             <AccordionTrigger>
                                 <div className='w-full flex items-center justify-between md:gap-3 gap-1'>
                                     <h1 className="md:text-2xl text-xl font-semibold text-balance flex-1 text-start">{quiz.item.subject.toUpperCase()}</h1>
-                                    <Button size={"none"} variant={"destructive"} className='p-1 z-50 mr-1' onClick={() => DeleteSubject(quiz.StateId, quiz.item.subject)} asChild>
-                                        <Trash2 size={28} />
-                                    </Button>
+                                    <DeleteSubjectDialog stateId={quiz.StateId} subject={quiz.item.subject} />
                                 </div>
                             </AccordionTrigger>
                             <AccordionContent className='space-y-8'>
