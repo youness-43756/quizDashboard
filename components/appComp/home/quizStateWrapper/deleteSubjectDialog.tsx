@@ -9,7 +9,7 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 import { useContext } from "react"
-import { InfoIcon, Trash2Icon } from "lucide-react"
+import { Trash2Icon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { QuizContext } from "@/context/contextProvider"
 
@@ -29,6 +29,7 @@ export function DeleteSubjectDialog({ stateId, subject }: { stateId: string, sub
             <DialogContent className="sm:max-w-md max-w-xs">
                 <DialogHeader>
                     <DialogTitle className="leading-8 text-xl"> Are you sure you want to delete the subject <span className="capitalize">&quot;{subject}&quot;</span>?</DialogTitle>
+                    <DialogDescription />
                 </DialogHeader>
                 <DialogFooter className="sm:justify-start">
                     <DialogClose asChild>

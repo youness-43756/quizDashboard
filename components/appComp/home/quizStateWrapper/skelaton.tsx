@@ -12,7 +12,7 @@ export default function Skelaton() {
       <Accordion type="single" collapsible>
         <AccordionItem value={"i-1"}>
           <AccordionTrigger>
-            <div className='flex items-center justify-between gap-1'>
+            <div className='w-full flex items-center justify-between md:gap-3 gap-1'>
               <Skeleton className="h-8 w-24" />
               <Skeleton className="h-8 w-8" />
             </div>
@@ -33,7 +33,7 @@ export default function Skelaton() {
       <Accordion type="single" collapsible>
         <AccordionItem value={"i-1"}>
           <AccordionTrigger>
-            <div className='flex items-center justify-between gap-1'>
+            <div className='w-full flex items-center justify-between md:gap-3 gap-1'>
               <Skeleton className="h-8 w-24" />
               <Skeleton className="h-8 w-8" />
             </div>
@@ -54,7 +54,7 @@ export default function Skelaton() {
       <Accordion type="single" collapsible>
         <AccordionItem value={"i-1"}>
           <AccordionTrigger>
-            <div className='flex items-center justify-between gap-1'>
+            <div className='w-full flex items-center justify-between md:gap-3 gap-1'>
               <Skeleton className="h-8 w-24" />
               <Skeleton className="h-8 w-8" />
             </div>
@@ -75,7 +75,7 @@ export default function Skelaton() {
       <Accordion type="single" collapsible>
         <AccordionItem value={"i-1"}>
           <AccordionTrigger>
-            <div className='flex items-center justify-between gap-1'>
+            <div className='w-full flex items-center justify-between md:gap-3 gap-1'>
               <Skeleton className="h-8 w-24" />
               <Skeleton className="h-8 w-8" />
             </div>
@@ -96,7 +96,7 @@ export default function Skelaton() {
       <Accordion type="single" collapsible>
         <AccordionItem value={"i-1"}>
           <AccordionTrigger>
-            <div className='flex items-center justify-between gap-1'>
+            <div className='w-full flex items-center justify-between md:gap-3 gap-1'>
               <Skeleton className="h-8 w-24" />
               <Skeleton className="h-8 w-8" />
             </div>
@@ -117,7 +117,7 @@ export default function Skelaton() {
       <Accordion type="single" collapsible>
         <AccordionItem value={"i-1"}>
           <AccordionTrigger>
-            <div className='flex items-center justify-between gap-1'>
+            <div className='w-full flex items-center justify-between md:gap-3 gap-1'>
               <Skeleton className="h-8 w-24" />
               <Skeleton className="h-8 w-8" />
             </div>
@@ -138,7 +138,7 @@ export default function Skelaton() {
       <Accordion type="single" collapsible>
         <AccordionItem value={"i-1"}>
           <AccordionTrigger>
-            <div className='flex items-center justify-between gap-1'>
+            <div className='w-full flex items-center justify-between md:gap-3 gap-1'>
               <Skeleton className="h-8 w-24" />
               <Skeleton className="h-8 w-8" />
             </div>
