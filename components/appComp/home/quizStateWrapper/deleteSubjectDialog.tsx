@@ -28,7 +28,7 @@ export function DeleteSubjectDialog({ stateId, subject }: { stateId: string, sub
             </DialogTrigger>
             <DialogContent className="sm:max-w-md max-w-xs">
                 <DialogHeader>
-                    <DialogTitle className="leading-8 text-xl"> Are you sure you want to delete the subject <span className="capitalize">"{subject}"</span>?</DialogTitle>
+                    <DialogTitle className="leading-8 text-xl"> Are you sure you want to delete the subject <span className="capitalize">&quot;{subject}&quot;</span>?</DialogTitle>
                 </DialogHeader>
                 <DialogFooter className="sm:justify-start">
                     <DialogClose asChild>
