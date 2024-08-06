@@ -28,7 +28,7 @@ export default function SubjectsWrapper() {
                         <AccordionItem value={quiz.StateId}>
                             <AccordionTrigger>
                                 <div className='flex items-center gap-3'>
-                                    <h1 className="text-2xl font-semibold">{quiz.item.subject.toUpperCase()}</h1>
+                                    <h1 className="md:text-2xl text-xl font-semibold">{quiz.item.subject.toUpperCase()}</h1>
                                     <Button size={"none"} variant={"destructive"} className='p-1 z-50' onClick={() => DeleteSubject(quiz.StateId, quiz.item.subject)} asChild>
                                         <Trash2 size={28} />
                                     </Button>

@@ -4,14 +4,12 @@ import SubjectsWrapper from "@/components/appComp/home/quizStateWrapper/subjects
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full">
-      <div className="sticky top-0 bg-white z-[100] py-5">
-        <div className="w-full flex gap-2 justify-between">
-          <SelectSubject />
-          <Filter />
-        </div>
+    <main className="h-full w-full">
+      <div className="w-full flex gap-2 justify-between">
+        <SelectSubject />
+        <Filter />
       </div>
-      <div className="space-y-3">
+      <div className="space-y-8">
         <SubjectsWrapper />
       </div>
     </main >

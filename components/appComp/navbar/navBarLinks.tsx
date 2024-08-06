@@ -14,12 +14,12 @@ const navigation = [
 ];
 
 export default function NavBarLinks() {
+    const pathname = usePathname();
     const context = useContext(QuizContext);
     if (!context) {
         return null;
     }
     const { quizState } = context;
-    const pathname = usePathname();
     return (
         <>
             {
@@ -29,8 +29,8 @@ export default function NavBarLinks() {
                             {link.icon}
                             <span>{link.label}</span>
                             <Badge variant="destructive"
-                                className={clsx("float-right",link.label !== "Home" && "hidden")}>
-                                    {quizState?.length}</Badge>
+                                className={clsx("float-right", link.label !== "Home" && "hidden")}>
+                                {quizState?.length}</Badge>
                         </Link>
                     </Button>
                 ))
